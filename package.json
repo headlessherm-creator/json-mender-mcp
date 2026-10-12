@@ -1,0 +1,19 @@
+{
+  "name": "structured-output-mcp",
+  "version": "0.1.0",
+  "description": "Deterministic structured-output validator/repair toolkit for AI agents: JSON/XML malformation repair, schema validation, regex testing, cron expression validation and next-run calculation, timezone-aware recurring event math, financial math. Local, offline, no telemetry.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "structured-output-mcp": "./src/index.js"
+  },
+  "keywords": ["mcp", "model-context-protocol", "mcp-server", "ai-agents", "json-repair", "structured-output", "schema-validation", "cron", "regex", "llm-tools", "deterministic", "local-first", "offline-first"],
+  "license": "MIT",
+  "author": "headless108",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.24.1",
+    "jsonrepair": "^3.9.0",
+    "cron-parser": "^5.10.2"
+  }
+}
