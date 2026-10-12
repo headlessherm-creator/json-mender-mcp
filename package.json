@@ -1,11 +1,11 @@
 {
-  "name": "structured-output-mcp",
+  "name": "json-mender-mcp",
   "version": "0.2.0",
-  "description": "Deterministic structured-output validator/repair toolkit for AI agents: JSON malformation repair, real JSON-Schema validation, regex testing. Local, offline, no telemetry.",
+  "description": "Deterministic JSON repair, regex testing, and real JSON-Schema validation for AI agents. Local, offline, no telemetry.",
   "type": "module",
   "main": "src/index.js",
   "bin": {
-    "structured-output-mcp": "./src/index.js"
+    "json-mender-mcp": "./src/index.js"
   },
   "keywords": ["mcp", "model-context-protocol", "mcp-server", "ai-agents", "json-repair", "structured-output", "schema-validation", "json-schema", "regex", "llm-tools", "deterministic", "local-first", "offline-first"],
   "license": "MIT",

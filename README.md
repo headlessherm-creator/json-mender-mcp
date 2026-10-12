@@ -1,6 +1,6 @@
-# Structured Output MCP
+# JSON Mender
 
-Deterministic structured-output validation and repair toolkit for AI agents — the same philosophy as [polymath-megablaster-mcp](https://github.com/headlessherm-creator/polymath-megablaster-mcp), applied specifically to models producing malformed JSON and invalid structured output.
+Deterministic JSON repair, regex testing, and real JSON-Schema validation for AI agents — the same philosophy as [polymath-megablaster-mcp](https://github.com/headlessherm-creator/polymath-megablaster-mcp), applied specifically to models producing malformed JSON and invalid structured output.
 
 Fully offline, deterministic, no telemetry, no API keys.
 
@@ -13,8 +13,8 @@ Fully offline, deterministic, no telemetry, no API keys.
 ## Setup
 
 ```bash
-git clone https://github.com/headlessherm-creator/structured-output-mcp.git
-cd structured-output-mcp
+git clone https://github.com/headlessherm-creator/json-mender-mcp.git
+cd json-mender-mcp
 npm install
 ```
 
@@ -23,9 +23,9 @@ Point your MCP client at `src/index.js`:
 ```json
 {
   "mcpServers": {
-    "structured-output": {
+    "json-mender": {
       "command": "node",
-      "args": ["/path/to/structured-output-mcp/src/index.js"]
+      "args": ["/path/to/json-mender-mcp/src/index.js"]
     }
   }
 }
