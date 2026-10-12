@@ -8,10 +8,6 @@ import {
 import {
   repairJson,
   validateRegex,
-  cronNextRuns,
-  cronValidate,
-  amortizationSchedule,
-  compoundInterest,
   validateAgainstSchema,
 } from './tools.js';
 
@@ -41,65 +37,15 @@ const TOOLS = [
     },
   },
   {
-    name: 'cron_next_runs',
-    description: 'Compute the next N run times for a cron expression, optionally timezone-aware.',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        expression: { type: 'string' },
-        count: { type: 'number' },
-        currentDate: { type: 'string', description: 'ISO date to compute from (default: now).' },
-        tz: { type: 'string', description: 'IANA timezone, e.g. "America/New_York".' },
-      },
-      required: ['expression'],
-    },
-  },
-  {
-    name: 'cron_validate',
-    description: 'Validate whether a cron expression is syntactically valid.',
-    inputSchema: {
-      type: 'object',
-      properties: { expression: { type: 'string' } },
-      required: ['expression'],
-    },
-  },
-  {
-    name: 'amortization_schedule',
-    description: 'Compute a full loan amortization schedule (payment, principal/interest split per month).',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        principal: { type: 'number' },
-        annualRatePct: { type: 'number' },
-        termMonths: { type: 'number' },
-      },
-      required: ['principal', 'annualRatePct', 'termMonths'],
-    },
-  },
-  {
-    name: 'compound_interest',
-    description: 'Compute compound interest exactly given principal, rate, years, and compounding frequency.',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        principal: { type: 'number' },
-        annualRatePct: { type: 'number' },
-        years: { type: 'number' },
-        compoundsPerYear: { type: 'number' },
-      },
-      required: ['principal', 'annualRatePct', 'years'],
-    },
-  },
-  {
     name: 'validate_against_schema',
-    description: 'Check an object against a simple key:type schema descriptor and report missing/mistyped fields.',
+    description: 'Validate data against a real JSON-Schema (draft 2020-12) and report all errors.',
     inputSchema: {
       type: 'object',
       properties: {
-        data: { type: 'object' },
-        schemaDescription: { type: 'object', description: 'e.g. {"name":"string","age":"number"}' },
+        data: { description: 'The data to validate (any JSON value).' },
+        schema: { type: 'object', description: 'A JSON-Schema object.' },
       },
-      required: ['data', 'schemaDescription'],
+      required: ['data', 'schema'],
     },
   },
 ];
@@ -107,10 +53,6 @@ const TOOLS = [
 const HANDLERS = {
   repair_json: repairJson,
   validate_regex: validateRegex,
-  cron_next_runs: cronNextRuns,
-  cron_validate: cronValidate,
-  amortization_schedule: amortizationSchedule,
-  compound_interest: compoundInterest,
   validate_against_schema: validateAgainstSchema,
 };
 
