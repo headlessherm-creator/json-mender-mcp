@@ -59,6 +59,7 @@ JSON repair MCP server, fix broken JSON from LLM, malformed JSON parser, JSON sc
 Same local-first philosophy, different problems:
 - [polymath-megablaster-mcp](https://github.com/headlessherm-creator/polymath-megablaster-mcp) — deterministic math, date, unit conversion, networking
 - [hiring-mender-mcp](https://github.com/headlessherm-creator/hiring-mender-mcp) — BambooHR + Greenhouse ATS write tools, one vocabulary
+- [helpdesk-mender-mcp](https://github.com/headlessherm-creator/helpdesk-mender-mcp) — Zendesk + Freshdesk + Help Scout write tools, one vocabulary
 
 ## License
 
