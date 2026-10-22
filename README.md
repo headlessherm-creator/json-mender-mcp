@@ -54,6 +54,12 @@ No `fetch`/`http` import anywhere in `src/tools.js` — every tool runs as pure 
 
 JSON repair MCP server, fix broken JSON from LLM, malformed JSON parser, JSON schema validation MCP, regex tester MCP, local MCP server no API key, Claude MCP JSON tools, AI agent structured output validation.
 
+## Related tools
+
+Same local-first philosophy, different problems:
+- [polymath-megablaster-mcp](https://github.com/headlessherm-creator/polymath-megablaster-mcp) — deterministic math, date, unit conversion, networking
+- [hiring-mender-mcp](https://github.com/headlessherm-creator/hiring-mender-mcp) — BambooHR + Greenhouse ATS write tools, one vocabulary
+
 ## License
 
 MIT
