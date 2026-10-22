@@ -1,6 +1,7 @@
 {
   "name": "json-mender-mcp",
-  "version": "0.2.0",
+  "version": "0.2.1",
+  "mcpName": "io.github.headlessherm-creator/json-mender-mcp",
   "description": "Deterministic JSON repair, regex testing, and real JSON-Schema validation for AI agents. Local, offline, no telemetry.",
   "type": "module",
   "main": "src/index.js",
